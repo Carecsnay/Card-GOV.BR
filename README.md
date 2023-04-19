@@ -10,10 +10,14 @@
 
 <p align="center">
   <h3 align="center"> Preview do Site</h3>
-  <img alt="Google Clone" src=".github/carecsnay.github.io_Card-GOV.BR.png" width="100%">
+  <img alt="Preview do Site" src=".github/carecsnay.github.io_Card-GOV.BR.png" width="100%">
   
   <h3 align="center"> Video de Demonstração</h3>
   
+
+https://user-images.githubusercontent.com/53373326/233070819-f15fcd1c-ffb4-485c-bb22-38f9ac2fd706.mp4
+
+
 </p>
 
 ## 🚀 Tecnologias
@@ -25,7 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Página para ajudar a guardar informações impressas de contas do GOV.BR 
+Página para ajudar a guardar informações impressas de contas do GOV.BR. 
 
 Preencha e imprima facilmente o seu cartão. 
 
