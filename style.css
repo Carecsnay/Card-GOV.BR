@@ -57,10 +57,13 @@ body{
     all: initial;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
-    margin-left: 5px;
     width: 250px;
+    text-transform: uppercase;
 
     border: solid 1px #D3D3D3;
+}
+#password {
+    text-transform: none;
 }
 
 .yellow {
