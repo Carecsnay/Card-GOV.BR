@@ -12,7 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card GOV.BR</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" href="https://www.crtrj.gov.br/wp-content/uploads/2023/01/favicon-285x300.png" />
+    <link
+      rel="shortcut icon"
+      href="https://www.crtrj.gov.br/wp-content/uploads/2023/01/favicon-285x300.png"
+    />
   </head>
   <body>
     <div class="container">
@@ -28,12 +31,21 @@
 
       <div class="form">
         <p class="yellow">NOME: <input type="text" /></p>
-        <p class="yellow">CPF: <input type="text" /></p>
+        <p class="yellow">CPF: <input type="text" id="mask" /></p>
         <p class="yellow">SENHA: <input type="text" /></p>
       </div>
     </div>
     <footer>
       <h1>Feito com muito 💓 por Bruno Benicio</h1>
     </footer>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+      var element = document.getElementById("mask");
+      var maskOptions = {
+        mask: "000.000.000-00",
+      };
+      var mask = IMask(element, maskOptions);
+    </script>
   </body>
 </html>
