@@ -9,6 +9,15 @@
 body{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 20px;
+}
+h1, span {
+    margin: 0 auto;
+    padding: 0;
 }
 
 .container {
@@ -16,12 +25,20 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 150px;
+
     max-width: 370px;
+    height: calc(198px + 30px);
+    
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px 10px 0px 10px;
 
     border: #FABD14 5px solid;
     border-radius: 20px;
-    padding: 10px;
+}
+
+.container div {
+    margin: 0 30px;
 }
 
 .content {
@@ -32,25 +49,17 @@ body{
 .logo .image {
     height: 85px;
     width: calc(100px * 2);
+    margin-left: -85px;
 }
 
 .logo-txt {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     margin-left: -135px;
 }
 
-.perfil input{
-    width: 50px;
-    height: 50px;
-    display: none;
-}
-
 .form {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 30px;
-
+    margin-top: 50px;
 }
 
 .form input {
@@ -59,6 +68,7 @@ body{
     font-weight: bold;
     width: 250px;
     text-transform: uppercase;
+    padding-left: 3px;
 
     border: solid 1px #D3D3D3;
 }
@@ -70,8 +80,15 @@ body{
     display: flex;
     color: #FABD14;
     font-weight: bold;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     justify-content: space-between;
+}
+
+/* Segundo container  */
+
+.icon {
+    width: 50px;
+    height: 95px;
 }
 
 footer {
