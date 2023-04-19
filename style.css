@@ -12,6 +12,10 @@ body{
     flex-direction: column;
 }
 
+#frente {
+    margin-top: 10px;
+}
+
 h1 {
     font-size: 20px;
 }
