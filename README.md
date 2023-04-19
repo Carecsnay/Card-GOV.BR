@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Página para ajudar a guardar informações impressas de contas do GOV.BR 
+Página para ajudar a guardar informações impressas de contas do GOV.BR. 
 
 Preencha e imprima facilmente o seu cartão. 
 
