@@ -95,6 +95,33 @@ h1, span {
     height: 95px;
 }
 
+button {
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 4px; 
+    cursor: pointer;
+    border: black 3px solid;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 34px;
+    width: 60px;
+    margin: 15px auto;
+}
+
+button:hover{
+    border: #FABD14 3px solid;
+    transition: 0.4s;
+}
+
+button img {
+    height: 20px;
+    width: 20px;
+}
+
 footer {
     bottom: 0;
     position: fixed;
@@ -112,11 +139,28 @@ footer {
 }
 
 @media print {
+    body {
+        margin-top: 200px;
+    }
+
     .form input {
         border: solid 1px white;
     }
 
     footer {
+        display: none;
+    }
+
+    .yellow {
+        justify-content: flex-start;
+    }
+
+    button {
+        display: none;
+        border: none;
+    }
+
+    button img {
         display: none;
     }
 }

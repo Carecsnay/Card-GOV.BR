@@ -1,90 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
-      rel="stylesheet"
-    />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Card GOV.BR</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="shortcut icon"
-      href="https://www.crtrj.gov.br/wp-content/uploads/2023/01/favicon-285x300.png"
-    />
-  </head>
-  <body>
-    <h1 id="frente">Frente</h1>
-    <div class="container">
-      <div class="content">
-        <div class="logo">
-          <img src="./src/images/10.png" class="image" alt="logo do governo" />
-          <span class="logo-txt">Mais Governo, Mais Cidadania.</span
-          ><br /><br />
-        </div>
-      </div>
 
-      <div class="form">
-        <p class="yellow">NOME: <input type="text" /></p>
-        <p class="yellow">CPF: <input type="text" id="mask" /></p>
-        <p class="yellow">SENHA: <input type="text" id="password" /></p>
-      </div>
-    </div>
-    <span
-      >✂----------------------------------------------------------------------------------------</span
-    >
-    <h1>Verso</h1>
-    <div class="container">
-      <div class="back">
-        <img src="./src/images/1.png" class="icon" alt="icone" />
-        <img src="./src/images/2.png" class="icon" alt="icone" />
-        <img src="./src/images/3.png" class="icon" alt="icone" />
-        <img src="./src/images/4.png" class="icon" alt="icone" />
-        <img src="./src/images/5.png" class="icon" alt="icone" />
-        <img src="./src/images/6.png" class="icon" alt="icone" />
-        <img src="./src/images/7.png" class="icon" alt="icone" />
-        <img src="./src/images/8.png" class="icon" alt="icone" />
-        <img src="./src/images/9.png" class="icon" alt="icone" />
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card GOV.BR</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="shortcut icon" href="./src/favicon/favicon-285x300.png" />
+</head>
+
+<body>
+  <h1 id="frente">Frente</h1>
+  <div class="container">
+    <div class="content">
+      <div class="logo">
+        <img src="./src/images/10.png" class="image" alt="logo do governo" />
+        <span class="logo-txt">Mais Governo, Mais Cidadania.</span><br /><br />
       </div>
     </div>
 
-    <footer>
-      <div>
-        <h2>Mais sobre o desenvolvedor</h2>
-        <ul class="social-list">
-          <li>
-            <a target="_blank" href="https://www.instagram.com/_bruno.benicio/">
-              <img src="./src/social/instagram.svg" alt="" />
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://youtube.com/@_bruno.benicio">
-              <img src="./src/social/youtube.svg" alt="" />
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/bruno-benicio-43b00910b/"
-            >
-              <img src="./src/social/linkedin.svg" alt="" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    <div class="form">
+      <p class="yellow">NOME: <input type="text" /></p>
+      <p class="yellow">CPF: <input type="text" id="mask" /></p>
+      <p class="yellow">SENHA: <input type="text" id="password" /></p>
+    </div>
+  </div>
+  <span>✂----------------------------------------------------------------------------------------</span>
+  <h1>Verso</h1>
+  <div class="container">
+    <div class="back">
+      <img src="./src/images/1.png" class="icon" alt="icone-1" />
+      <img src="./src/images/2.png" class="icon" alt="icone-2" />
+      <img src="./src/images/3.png" class="icon" alt="icone-3" />
+      <img src="./src/images/4.png" class="icon" alt="icone-4" />
+      <img src="./src/images/5.png" class="icon" alt="icone-5" />
+      <img src="./src/images/6.png" class="icon" alt="icone-6" />
+      <img src="./src/images/7.png" class="icon" alt="icone-7" />
+      <img src="./src/images/8.png" class="icon" alt="icone-8" />
+      <img src="./src/images/9.png" class="icon" alt="icone-9" />
+    </div>
+  </div>
 
-    <script src="https://unpkg.com/imask"></script>
-    <script>
-      var element = document.getElementById("mask");
-      var maskOptions = {
-        mask: "000.000.000-00",
-      };
-      var mask = IMask(element, maskOptions);
-    </script>
-  </body>
+  <button onclick="window.print()"> <img src="src/buttons/print.avif" alt=""></button>
+
+  <footer>
+    <div>
+      <h2>Mais sobre o desenvolvedor</h2>
+      <ul class="social-list">
+        <li>
+          <a target="_blank" href="https://www.instagram.com/_bruno.benicio/">
+            <img src="./src/social/instagram.svg" alt="Logo do Instagram" />
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://youtube.com/@_bruno.benicio">
+            <img src="./src/social/youtube.svg" alt="Logo do YouTube" />
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/bruno-benicio-43b00910b/">
+            <img src="./src/social/linkedin.svg" alt="Logo do Linkedin" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/imask"></script>
+  <script>
+    var element = document.getElementById("mask");
+    var maskOptions = {
+      mask: "000.000.000-00",
+    };
+    var mask = IMask(element, maskOptions);
+  </script>
+</body>
+
 </html>
