@@ -6,7 +6,7 @@
     
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -18,10 +18,13 @@ body{
 
 h1 {
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 h1, span {
-    margin: 0 auto;
-    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
@@ -96,25 +99,24 @@ h1, span {
 }
 
 button {
-    background-color: white;
-    padding: 12px 24px;
+    padding: 6px 12px;
+    border: 2px transparent solid;
     border-radius: 4px; 
     cursor: pointer;
-    border: black 3px solid;
-
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    height: 34px;
-    width: 60px;
-    margin: 15px auto;
+    height: 30px;
+    width: 30px;
+
+    margin: 2px auto -2px auto;
 }
 
 button:hover{
-    border: #FABD14 3px solid;
-    transition: 0.4s;
+    transition: 0.5s;
+    border: 2px #FABD14 solid;
 }
 
 button img {
@@ -124,7 +126,6 @@ button img {
 
 footer {
     bottom: 0;
-    position: fixed;
     width: 100%;
     text-align: center;
     margin: 0 0 10px 0;
@@ -136,6 +137,7 @@ footer {
     justify-items: center;
     justify-content: center;
     list-style: none;
+    align-items: center;
 }
 
 @media screen and (max-height: 768px) {
