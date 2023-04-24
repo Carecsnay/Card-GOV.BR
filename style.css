@@ -138,6 +138,14 @@ footer {
     list-style: none;
 }
 
+@media screen and (max-height: 768px) {
+    h1 {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+  }
+
 @media print {
     body {
         margin-top: 200px;
