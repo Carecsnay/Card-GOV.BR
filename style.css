@@ -149,10 +149,14 @@ footer {
     align-items: center;
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 768px) {
     h1 {
         display: flex;
         align-items: center;
+    }
+
+    h6 {
+        display: none;
     }
   }
 
