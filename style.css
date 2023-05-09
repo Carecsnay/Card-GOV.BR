@@ -133,7 +133,6 @@ button img {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -157,6 +156,10 @@ footer {
 
     h6 {
         display: none;
+    }
+
+    footer {
+        position: fixed;
     }
   }
 
