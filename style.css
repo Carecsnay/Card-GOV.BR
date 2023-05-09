@@ -12,6 +12,11 @@ body {
     flex-direction: column;
 }
 
+h6 {
+    position: absolute;
+    bottom: 0;
+}
+
 h1 {
     margin-top: 15px;
     margin-bottom: -10px;
@@ -55,13 +60,14 @@ h1, span {
 .logo .image {
     height: 85px;
     width: calc(100px * 2);
-    margin-left: -85px;
+    margin-left: 0;
 }
 
 .logo-txt {
     font-size: 10px;
     font-weight: bold;
-    margin-left: -135px;
+    margin-top: -16px;
+    margin-left: 10px;
 }
 
 .form {
@@ -75,6 +81,7 @@ h1, span {
     width: 250px;
     text-transform: uppercase;
     padding-left: 3px;
+    margin-left: 3px;
 
     border: solid 1px #D3D3D3;
 }

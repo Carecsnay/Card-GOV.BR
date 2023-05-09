@@ -14,6 +14,9 @@
 </head>
 
 <body>
+  
+  <h6>ULTIMA ATUALIZAÇÃO 09/05/2023 11:44</h6>
+
   <h1 id="frente">Frente</h1>
   <div class="container">
     <div class="content">
@@ -24,10 +27,17 @@
     </div>
 
     <div class="form">
-      <p class="yellow">NOME: <input type="text" /></p>
-      <p class="yellow">CPF: <input type="text" id="mask" /></p>
-      <p class="yellow">SENHA: <input type="text" id="password" /></p>
+      <p class="yellow">NOME:
+        <input type="text" id="name" />
+      </p>
+      <p class="yellow">CPF:
+        <input type="text" id="mask" />
+      </p>
+      <p class="yellow">SENHA:
+        <input type="text" id="password" />
+      </p>
     </div>
+
   </div>
   <h1>Verso</h1>
   <div class="container">
@@ -75,6 +85,28 @@
       mask: "000.000.000-00",
     };
     var mask = IMask(element, maskOptions);
+
+    //PEGAR PRIMEIRO NOME
+    const inputName = document.getElementById("name");
+
+    inputName.addEventListener("blur", function () {
+      const nameValue = this.value;
+      if (nameValue) {
+        const firstName = nameValue.split(" ")[0];
+
+        //INSERIR PRIMEIRO NOME NO CAMPO PASSWORD
+        const inputPassword = document.getElementById("password");
+        const firstLetter = firstName.charAt(0).toUpperCase();
+        const restOfName = firstName.slice(1).toLowerCase();
+        inputPassword.value = `${firstLetter}${restOfName}@1234`;
+
+      }
+    });
+
+    
+
+
+
   </script>
 </body>
 
