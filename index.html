@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  
+
   <h6>ULTIMA ATUALIZAÇÃO 09/05/2023 11:44</h6>
 
   <h1 id="frente">Frente</h1>
@@ -80,11 +80,16 @@
 
   <script src="https://unpkg.com/imask"></script>
   <script>
-    var element = document.getElementById("mask");
-    var maskOptions = {
+    const element = document.getElementById("mask");
+    const maskOptions = {
       mask: "000.000.000-00",
     };
-    var mask = IMask(element, maskOptions);
+    const maskCPF = IMask(element, maskOptions);
+
+    const input = document.getElementById('name');
+    const maskName = IMask(input, {
+      mask: /^[a-zA-Z]+$/,
+    });
 
     //PEGAR PRIMEIRO NOME
     const inputName = document.getElementById("name");
@@ -103,7 +108,7 @@
       }
     });
 
-    
+
 
 
 
