@@ -9,9 +9,10 @@
 ### Link da página: [Clique aqui](https://carecsnay.github.io/Card-GOV.BR/).
 
 <p align="center">
-  <h3 align="center"> Preview do Site</h3>
-  <img alt="Preview do Site" src=".github/carecsnay.github.io_Card-GOV.BR.png" width="100%">
-  
+  <h3 align="center"> Preview do Site (V1)</h3>
+  <img alt="Preview do Site" src=".github\Card-GOV.BR V1.png" width="100%">
+  <h3 align="center"> Preview do Site (V2)</h3>
+  <img alt="Preview do Site" src=".github\Card-GOV.BR V2.png" width="100%">
   <h3 align="center"> Video de Demonstração</h3>
   
 
@@ -26,15 +27,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML5 
 - CSS3
+- JAVASCRIPT
+- REGEX
 - Biblioteca de Terceiros (IMask)
 
 ## 💻 Projeto
 
-Página para ajudar a guardar informações impressas de contas do GOV.BR. 
+Página criada para ajudar a guardar informações impressas de contas do GOV.BR e cartões para ajudar na rotina do escritório onde trabalho. 
 
-Preencha e imprima facilmente o seu cartão. 
-
-O intuito do projeto foi agilizar a criação de cartões para clientes do escritório onde trabalho.
+💡Preencha e imprima facilmente o seu cartão. 
 
 ---
 
