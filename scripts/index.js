@@ -1,23 +1,18 @@
 //Regras de preenchimento para campo Nome
-const input = document.getElementById('name');
-const maskName = IMask(input, {
+const inputName = document.getElementById('name');
+const maskName = IMask(inputName, {
     mask: /^[a-zA-Z ]+$/,
 });
 
 //Regras de preenchimento para campo CPF
-const element = document.getElementById("mask");
+const inputCPF = document.getElementById("cpf");
 const maskOptions = {
     mask: "000.000.000-00",
 };
-const maskCPF = IMask(element, maskOptions);
-
-
-//PEGAR PRIMEIRO NOME
-const inputName = document.getElementById("name");
+const maskCPF = IMask(inputCPF, maskOptions);
 
 //Adiciona um evento de escuta que executa o código depois do input perder o foco no input nome
 const inputPassword = document.getElementById("password");
-
 inputName.addEventListener("change", function () {
     const nameValue = this.value;
     if (nameValue) {
@@ -29,5 +24,7 @@ inputName.addEventListener("change", function () {
     }
     if (nameValue == ''){
         inputPassword.value = '';
+        inputCPF.value = '';
     }
+
 });
