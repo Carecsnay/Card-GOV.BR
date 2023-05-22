@@ -28,3 +28,11 @@ inputName.addEventListener("change", function () {
     }
 
 });
+
+// Atualizar title de acordo com o nome colocado no campo input id Name
+const nameInput = document.getElementById("name");
+const titleElement = document.querySelector("title");
+
+nameInput.addEventListener("input", function() {
+  titleElement.textContent = this.value.toUpperCase() || "Card GOV.BR";
+});
