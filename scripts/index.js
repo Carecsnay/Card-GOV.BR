@@ -30,9 +30,28 @@ inputName.addEventListener("change", function () {
 });
 
 // Atualizar title de acordo com o nome colocado no campo input id Name
-const nameInput = document.getElementById("name");
 const titleElement = document.querySelector("title");
+const nameInput = document.getElementById("name");
 
-nameInput.addEventListener("input", function() {
-  titleElement.textContent = this.value.toUpperCase() || "Card GOV.BR";
-});
+document.addEventListener("keydown", changeTitle);
+
+function changeTitle(event) {
+    if (event) {
+      // Código relacionado ao evento 'keydown'
+      if (event.key === "p") {
+        if (event.ctrlKey || event.metaKey) {
+          event.preventDefault(); // não executar o comando por padrão primeiro
+          titleElement.textContent = nameInput.value.toUpperCase() || "Card GOV.BR";
+          setTimeout(function() {
+            window.print();
+          }, 500); // Atraso de 500 milissegundos (meio segundo) para executar o comando padrão que é imprimir.
+        }
+      }
+    } else {
+      // Código relacionado ao clique no botão
+      titleElement.textContent = nameInput.value.toUpperCase() || "Card GOV.BR";
+      setTimeout(function() {
+        window.print();
+      }, 500); // Atraso de 500 milissegundos (meio segundo) para executar o comando padrão que é imprimir.
+    }
+  }
