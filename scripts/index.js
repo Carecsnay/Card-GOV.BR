@@ -1,7 +1,7 @@
 //Regras de preenchimento para campo Nome
 const inputName = document.getElementById('name');
 const maskName = IMask(inputName, {
-    mask: /^[a-zA-Z ]+$/,
+    mask: /^[a-zA-Z .]+$/,
 });
 
 //Regras de preenchimento para campo CPF
