@@ -3,7 +3,7 @@ const inputName = document.getElementById('name');
 const inputPassword = document.getElementById("password");
 const inputCPF = document.getElementById("cpf");
 const titleElement = document.querySelector("title");
-const button = document.getElementById('botao');
+const button = document.getElementById('button');
 
 const maskName = IMask(inputName, {
   mask: /^[a-zA-Z .ÇçéÉóÓãÃ]+$/,
@@ -17,15 +17,21 @@ const maskCPF = IMask(inputCPF, maskOptions);
 
 //Adiciona um evento de escuta que executa o código depois do input perder o foco no input nome
 inputName.addEventListener("input", function () {
-  const nameValue = this.value;
-  if (nameValue) {
-    const firstName = nameValue.split(" ")[0]; //Separa a primeira palavra do nome do sobrenome
+  if (inputName) {
+    const firstName = inputName.value.split(" ")[0]; //Separa a primeira palavra do nome do sobrenome
+    const firstLetter = firstName.charAt(0).toUpperCase(); //Coloca a primeira letra em maiúsculo
+    const restOfName = firstName.slice(1).toLowerCase(); //Coloca da segunda letra em diante em minusculo  
 
-    const firstLetter = firstName.charAt(0).toUpperCase(); //Coloca a primeira letra em maiusculo
-    const restOfName = firstName.slice(1).toLowerCase(); //Coloca da segunda letra em diante em minusculo
-    inputPassword.value = `${firstLetter}${restOfName}@1234`; //Cocatena as duas constantes
+    inputCPF.addEventListener("input", function () {
+      if (inputCPF.value.length >= 14) { //conta os "." e "-"
+        const firstTwoNumbersCPF = inputCPF.value.substring(0, 2);
+        const lastTwoNumbersCPF = inputCPF.value.substring(inputCPF.value.length - 2);
+        inputPassword.value = `${firstLetter}${restOfName}@${firstTwoNumbersCPF}${lastTwoNumbersCPF}`; //Concatena as duas constantes
+      }
+    })
   }
-  if (nameValue == '') {
+
+  if (inputName.value == '') {
     inputCPF.value = '';
     inputPassword.value = '';
   }
@@ -111,11 +117,10 @@ function printDocument() {
 
 button.addEventListener('click', printDocument);
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
   // Verifica se as teclas Ctrl + P foram pressionadas
   if (event.key === 'p' && (event.ctrlKey || event.metaKey)) {
     event.preventDefault(); // Não executar o comando de impressão padrão do navegador
     printDocument();
   }
 });
-
