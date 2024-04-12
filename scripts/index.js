@@ -4,6 +4,11 @@ const inputPassword = document.getElementById("password");
 const inputCPF = document.getElementById("cpf");
 const titleElement = document.querySelector("title");
 const button = document.getElementById('button');
+const modal = document.getElementById("modal");
+const buttonModal = document.getElementById("button");
+const contentModal = document.querySelector('.modal-content');
+
+
 
 const maskName = IMask(inputName, {
   mask: /^[a-zA-Z .ÇçéÉóÓãÃ]+$/,
@@ -93,6 +98,9 @@ function validateCPF(cpf) {
 function printDocument() {
   const cpf = inputCPF.value;
   const nome = inputName.value.trim(); // Remove espaços em branco do início e do fim
+  if (modal.parentNode) { // Remove modal quando clica em imprimir
+    modal.parentNode.removeChild(modal)
+  }
 
   if (nome === '') {
     // Campo de nome vazio, modificar a aparência do campo de entrada
@@ -109,10 +117,12 @@ function printDocument() {
     setTimeout(function () {
       window.print();
     }, 500);
-  } else {
+  }
+  else {
     // CPF inválido, modificar a aparência do campo de entrada
     inputCPF.classList.add('invalid');
   }
+
 }
 
 button.addEventListener('click', printDocument);
@@ -124,3 +134,55 @@ document.addEventListener('keydown', function (event) {
     printDocument();
   }
 });
+
+// Encontra o elemento que fecha o modal
+let close = document.getElementsByClassName("close")[0];
+
+// Quando o usuário clicar no botão, abre o modal
+buttonModal.onclick = function () {
+  modal.style.display = "block";
+}
+
+// Quando o usuário clicar no 'x', fecha o modal
+close.onclick = function () {
+  modal.style.display = "none";
+}
+
+// Quando o usuário clicar fora do modal, também fecha o modal
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Função para copiar a chave PIX para a área de transferência
+function copyToClipboard() {
+  // Seleciona o elemento que contém a chave PIX
+  let pixKey = "00020126580014br.gov.bcb.pix0136453b49ed-b585-4cff-84a6-bfc5db92ae5d5204000053039865802BR5925BRUNO BENICIO DE ANDRADE 6011CAMPO MAIOR62110507CardGov63047622";
+  navigator.clipboard.writeText(pixKey)
+    .then(function () {
+      // Exibe uma mensagem temporária na tela
+      let copyMessage = document.getElementById("copyMessage");
+      copyMessage.textContent = "Chave PIX copiada para a área de transferência!";
+      copyMessage.classList.add("show");
+
+      // Oculta a mensagem após 3 segundos
+      setTimeout(function () {
+        copyMessage.textContent = "";
+        copyMessage.classList.remove("show");
+      }, 3000);
+    })
+    .catch(function (err) {
+      console.error('Erro ao copiar: ', err);
+      // Exibe uma mensagem de erro temporária na tela
+      let copyMessage = document.getElementById("copyMessage");
+      copyMessage.textContent = "Erro ao copiar a chave PIX. Por favor, copie manualmente.";
+      copyMessage.classList.add("show");
+
+      // Oculta a mensagem após 3 segundos
+      setTimeout(function () {
+        copyMessage.textContent = "";
+        copyMessage.classList.remove("show");
+      }, 3000);
+    });
+}

@@ -22,7 +22,7 @@
         <span class="logo-txt">Mais Governo, Mais Cidadania.</span><br />
       </div>
     </div>
-    <form class="form" action="#" method="post">
+    <form class="form" action="#" method="post" autocomplete="off">
       <p class="default">NOME:
         <input autofocus type="text" id="name" />
       </p>
@@ -73,12 +73,22 @@
           </a>
         </li>
         <li>
-          <h6>🔽 ULTIMA ATUALIZAÇÃO 25/08/2023 11:40</h6>
+          <h6>🔽 ULTIMA ATUALIZAÇÃO 12/04/2024 09:59</h6>
         </li>
       </ul>
     </div>
   </footer>
-
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ajude a manter o projeto</h2>
+      <p class="warnPix">Clique no botão abaixo para copiar a chave pix</p>
+      <div id="copyMessage" class="copy-message"></div>
+      <button id="copyButton" onclick="copyToClipboard()">Copiar Chave PIX</button>
+      <p>Ou se preferir, escaneie o QR Code abaixo:</p>
+      <img class="QRPix" src="./src/images//qrPIX.png" alt="QR Code do PIX" />
+    </div>
+  </div>
   <script src="./scripts/imask.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
