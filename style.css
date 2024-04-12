@@ -246,7 +246,11 @@ footer li h6 {
     h6 {
         display: none;
     }
-
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
 }
 
 @media print {
